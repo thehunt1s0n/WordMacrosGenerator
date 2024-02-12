@@ -138,7 +138,7 @@ $selection.typeText("The word document has been generated.")
 $docmodule = $doc.VBProject.VBComponents.item(1)
 $docmodule.CodeModule.AddFromString($code)
 $doc.SaveAs("C:\Users\Public\$docName.doc", [microsoft.office.interop.word.WdSaveFormat]::wdFormatDocument97)
-Write-Host "Check your desktop:"
+Write-Host "Check C:\Users\Public"
 $word.Quit()
 [System.Runtime.Interopservices.Marshal]::ReleaseComObject($word) | out-null
 if (Get-Process winword){Stop-Process -name winword}
